@@ -1,3 +1,4 @@
+
 CREATE TABLE public.layoffs_data(
     company TEXT,
     location TEXT,
