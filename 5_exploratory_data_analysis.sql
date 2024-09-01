@@ -19,7 +19,7 @@ LIMIT 10;
 SELECT MIN(date), MAX(date)
 FROM layoffs_staging;
 
--- What are the top 5 industries that have highest layoffs.
+-- What are the top 10 industries that have highest layoffs.
 SELECT industry, SUM(total_laid_off)
 FROM layoffs_staging
 GROUP BY industry

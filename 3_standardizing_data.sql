@@ -1,10 +1,9 @@
--- Wiith TRIM we cleaned the spaces
+-- Wiith TRIM we cleaned the spaces insides some columns.
 
  UPDATE layoffs_staging
  SET company = TRIM(company);
 
- -- Checked unique values in industry and found same ones but different names. Corrected(3 values).
-
+ -- Checked unique values in industry and found same ones but different names. Corrected(3 values), like Crypto and CryptoCurrency .
 SELECT DISTINCT industry
 FROM layoffs_staging
 ORDER BY 1;

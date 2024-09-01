@@ -1,4 +1,4 @@
-
+-- Created table, where daat sourse is layoffs_data.
 CREATE TABLE public.layoffs_data(
     company TEXT,
     location TEXT,

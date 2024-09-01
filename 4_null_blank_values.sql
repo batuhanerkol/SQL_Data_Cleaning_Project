@@ -24,12 +24,11 @@ WHERE t1.company = t2.company
   AND t1.industry IS NULL
   AND t2.industry IS NOT NULL;
 
--- Delete null values which are numeric. 348 row deleted
-
+-- Delete null values which are numeric. 1147 row deleted. We have 1193 unique and non null values.
 DELETE 
 FROM layoffs_staging
 WHERE total_laid_off IS NULL
-AND percentage_laid_off IS NULL;
+OR percentage_laid_off IS NULL;
 
 SELECT *
 FROM layoffs_staging

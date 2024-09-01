@@ -1,5 +1,4 @@
 -- There are 2361 values with 21 duplicates.
--- We ranked duplicate values as 2,3 etc.
 WITH duplicate_cte AS
 (
     SELECT*,
@@ -12,7 +11,7 @@ SELECT*
 FROM duplicate_cte
 WHERE row_num > 1;
 
--- Created new table row_num.
+-- Created new table with new column, row_num.
 CREATE TABLE layoffs_staging(
     company TEXT,
     location TEXT,
@@ -38,10 +37,10 @@ DELETE
 FROM layoffs_staging
 WHERE row_num > 1;
 
--- Remove the row_num column
+-- Removed the row_num column
 ALTER TABLE layoffs_staging
 DROP COLUMN row_num;
 
---we have 2340 unique values
+--We have 2340 unique values
 SELECT*
 FROM layoffs_staging
