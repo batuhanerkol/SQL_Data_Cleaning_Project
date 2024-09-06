@@ -202,7 +202,7 @@ ORDER BY 2 DESC;
 
 ![Highest Layoffs](Graphics/stages.png)
 ```sql
--- What is th total nukber of layoff?
+-- What is th total number of layoff?
 WITH rolling_total AS
 (
     SELECT TO_CHAR(date, 'YYYY-MM') AS month, SUM(total_laid_off) AS total_off
